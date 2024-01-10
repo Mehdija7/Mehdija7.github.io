@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Glory", sans-serif;
+}
+.main {
+  overflow-x: hidden;
+}
+.bckg {
+  background-color: #282c34;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.leftSide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.rightSide {
+  width: 60%;
+  height: 100%;
+  background-image: url(../Image/slikaCV.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+  position: absolute;
+  right: 0;
+}
+
+.mainHeading {
+  width: 100%;
+  color: white;
+  font-size: 60px;
+  margin-top: 18%;
+  margin-left: 6%;
+  position: absolute;
+  z-index: 900;
+}
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.content {
+  color: #ff9999;
+  animation: fadeInOut 2s linear infinite;
+  margin-top: 40%;
+  margin-left: 10%;
+  font-size: 30px;
+}
+.multipleHexagon {
+  position: absolute;
+  margin-left: 0%;
+  margin-top: 10%;
+  z-index: 0;
+  opacity: 76%;
+}
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+.parallaxContent {
+  position: relative;
+}
+.parallaxMain {
+  align-items: center;
+  display: flex;
+  height: 700px;
+  justify-content: center;
+}
+.parallaxCard {
+  background-color: white;
+  border-radius: 20px 0 20px 0;
+  height: auto;
+  padding: 10px;
+  width: 42vw;
+  color: var(--parallex-text);
+}
+.parallaxCardBorder {
+  border: 3px solid #ff9999;
+  border-radius: 20px 0 20px 0;
+  padding: 30px 40px;
+  background-color: white;
+  color: black;
+}
+.parallaxTitle {
+  color: #ff9999;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: revert;
+  font-weight: bold;
+}
+.parallaxText {
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bolder;
+}
+.skills {
+  background-color: #282c34;
+  height: 700px;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.skillText {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 10px;
+  height: 100%;
+  border-bottom: #ff9999;
+}
+.par {
+  margin: 0;
+  color: white;
+  height: 50%;
+  width: 50%;
+}
+.headerSkills {
+  color: white;
+  margin-bottom: 6px;
+  margin-left: 0px;
+}
+.skillSet {
+  margin-top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url(../Image/HexagonsReal.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 8%;
+}
+.skill {
+  margin: 0;
+  animation: fadeOutIn 5s linear infinite;
+  height: 100px;
+  width: 100px;
+}
+@keyframes fadeOutIn {
+  0%,
+  100% {
+    opacity: 70%;
+    font-size: 50px;
+  }
+  50% {
+    opacity: 40%;
+    font-size: 48px;
+  }
+}
+.info {
+  width: 100%;
+  height: 300px;
+  background-color: #282c34;
+  display: flex;
+}
+.squares {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.information {
+  color: #ff9999;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.information svg:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.horizontalLine {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.horizontalLine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ff9999;
+  animation: drawLine 5s forwards infinite;
+}
+
+@keyframes drawLine {
+  to {
+    width: 100%;
+  }
+}
+
+.text {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    overflow-x: hidden;
+  }
+
+  .bckg {
+    background-color: #282c34;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .leftSide {
+    width: 100%;
+    height: 40%;
+    position: static;
+  }
+
+  .rightSide {
+    width: 100%;
+    height: 60%;
+    position: static;
+    /* clip-path: polygon(100% 100, 100% 100, 100% 100%, 100% 100%, 0 100%); */
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+  }
+  .content {
+    color: #ff9999;
+    animation: fadeInOut 2s linear infinite;
+    margin-top: 80%;
+    margin-left: 2%;
+    font-size: 30px;
+  }
+  .parallaxCard {
+    background-color: white;
+    border-radius: 20px 0 20px 0;
+    height: auto;
+    padding: 10px;
+    width: auto;
+    color: var(--parallex-text);
+  }
+}
